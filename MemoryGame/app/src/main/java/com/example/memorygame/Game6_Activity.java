@@ -10,9 +10,14 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.util.Arrays;
 import java.util.Collections;
 
@@ -32,7 +37,13 @@ public class Game6_Activity extends AppCompatActivity {
     int clickedFirst, clickedSecond;
     int cardNumber = 1;
     int points = 0;
-
+    int score1 = 0;
+    int score2 = 0;
+    int score3 = 0;
+    String stringScore1 = "";
+    String stringScore2 = "";
+    String stringScore3 = "";
+    String userName_string ="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +60,7 @@ public class Game6_Activity extends AppCompatActivity {
         btn5 = (ImageView) findViewById(R.id.btn5);
         tryAgain_btn = findViewById(R.id.tryAgain_btn);
         endGame_btn = findViewById(R.id.endGame_btn);
+        newGame_btn = findViewById(R.id.newGame_btn);
         score = (TextView) findViewById(R.id.score_edit);
 
         btn0.setTag("0");
@@ -57,6 +69,14 @@ public class Game6_Activity extends AppCompatActivity {
         btn3.setTag("3");
         btn4.setTag("4");
         btn5.setTag("5");
+
+        stringScore1 = readFromFile("level6_sc1.txt");
+        stringScore2 = readFromFile("level6_sc2.txt");
+        stringScore3 = readFromFile("level6_sc3.txt");
+        score1 = Integer.parseInt(stringScore1);
+        score2 = Integer.parseInt(stringScore2);
+        score3 = Integer.parseInt(stringScore3);
+
 
         //load the card images
         frontOfCardsResources();
@@ -141,24 +161,28 @@ public class Game6_Activity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        AlertDialog.Builder alertDialogBuilder2 = new AlertDialog.Builder(Game6_Activity.this);
-                        alertDialogBuilder2
-                                .setMessage("Game OVER!\nScore: " + points)
-                                .setCancelable(false)
-                                .setPositiveButton("QUIT", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialogInterface, int i) {
-                                        startActivity(new Intent(Game6_Activity.this,MainActivity.class));
-                                        finish();
-                                    }
-                                });
-                        AlertDialog alertDialog = alertDialogBuilder2.create();
-                        alertDialog.show();
+                        if(!userName_string.equals("")){
+                            updateScoreBoard();
+                        }
+                        stop();
+                        startActivity(new Intent(Game6_Activity.this,MainActivity.class));
+                        finish();
                     }
                 }, 3000);
             }
         });
 
+        newGame_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!userName_string.equals("")){
+                    updateScoreBoard();
+                }
+                stop();
+                startActivity(new Intent(Game6_Activity.this,Game6_Activity.class));
+                finish();
+            }
+        });
 
     }
 
@@ -297,35 +321,13 @@ public class Game6_Activity extends AppCompatActivity {
                 btn3.getVisibility() ==View.INVISIBLE &&
                 btn4.getVisibility() ==View.INVISIBLE &&
                 btn5.getVisibility() ==View.INVISIBLE){
-
             showAnswer();
+            tryAgain_btn.setEnabled(false);
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(Game6_Activity.this);
-                    alertDialogBuilder
-                            .setMessage("Game OVER!\nScore: " + points)
-                            .setCancelable(false)
-                            .setPositiveButton("New", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    Intent intent = new Intent(getApplicationContext(), Game6_Activity.class);
-                                    startActivity(intent);
-                                    stop();
-                                    finish();
-                                }
-                            })
-                            .setNegativeButton("EXIT", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    startActivity(new Intent(Game6_Activity.this,MainActivity.class));
-                                    stop();
-                                    finish();
-                                }
-                            });
-                    AlertDialog alertDialog = alertDialogBuilder.create();
-                    alertDialog.show();
+                    getUserName();
                 }
             }, 3000);
         }
@@ -468,4 +470,74 @@ public class Game6_Activity extends AppCompatActivity {
         super.onStop();
         stopPlayer();
     }
+
+    public String readFromFile(String fileName){
+        File path = getApplicationContext().getFilesDir();
+        File readFrom = new File(path, fileName);
+        byte[] content = new byte[(int) readFrom.length()];
+        try {
+            FileInputStream stream = new FileInputStream(readFrom);
+            stream.read(content);
+            return new String(content);
+        }catch (Exception e){
+            e.printStackTrace();
+            return e.toString();
+        }
+    }
+
+    public void writeToFile(String fileName, String content){
+        File path = getApplicationContext().getFilesDir();
+        try {
+            FileOutputStream writer = new FileOutputStream(new File(path, fileName));
+            writer.write(content.getBytes());
+            writer.close();
+            //Toast.makeText(getApplicationContext(), "Wrote to file: " + fileName, Toast.LENGTH_SHORT).show();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void updateScoreBoard(){
+        if(points> score1){
+            //write initials
+            writeToFile("level6_init1.txt",userName_string);
+            //write scores
+            writeToFile("level6_sc1.txt",String.valueOf(points));
+        }else if(points> score2){
+            //write initials
+            writeToFile("level6_init2.txt",userName_string);
+            //write scores
+            writeToFile("level6_sc2.txt",String.valueOf(points));
+        }else if(points> score3){
+            //write initials
+            writeToFile("level6_init3.txt",userName_string);
+            //write scores
+            writeToFile("level6_sc3.txt",String.valueOf(points));
+        }
+    }
+
+    public void getUserName(){
+        AlertDialog.Builder alert = new AlertDialog.Builder(Game6_Activity.this);
+        alert.setTitle("GAME OVER!\nScore: " + points);
+        alert.setMessage("Please enter 3 initials, if Cancel clicked, it's set to zzz");
+        // Set an EditText view to get user input
+        final EditText input = new EditText(Game6_Activity.this);
+        alert.setView(input);
+        alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                String value = String.valueOf(input.getText());
+                // Do something with value!
+                userName_string = value;
+            }
+        });
+        alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                // Canceled.
+                userName_string = "zzz";
+            }
+        });
+        alert.show();
+    }
+
+
 }

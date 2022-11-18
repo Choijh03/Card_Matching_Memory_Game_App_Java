@@ -97,6 +97,35 @@ public class Scores_Activity extends AppCompatActivity {
         tv_level20_score2 = (TextView) findViewById(R.id.tv_level20_score2);
         tv_level20_score3 = (TextView) findViewById(R.id.tv_level20_score3);
 
+
+        readScores();
+
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Scores_Activity.this,MainActivity.class));
+                finish();
+            }
+        });
+
+    }
+
+    public String readFromFile(String fileName){
+        File path = getApplicationContext().getFilesDir();
+        File readFrom = new File(path, fileName);
+        byte[] content = new byte[(int) readFrom.length()];
+        try {
+            FileInputStream stream = new FileInputStream(readFrom);
+            stream.read(content);
+            return new String(content);
+        }catch (Exception e){
+            e.printStackTrace();
+            return e.toString();
+        }
+    }
+
+    public void readScores(){
         tv_level4_initial1.setText(readFromFile("level4_init1.txt"));
         tv_level4_initial2.setText(readFromFile("level4_init2.txt"));
         tv_level4_initial3.setText(readFromFile("level4_init3.txt"));
@@ -159,32 +188,6 @@ public class Scores_Activity extends AppCompatActivity {
         tv_level20_score1.setText(readFromFile("level20_sc1.txt"));
         tv_level20_score2.setText(readFromFile("level20_sc2.txt"));
         tv_level20_score3.setText(readFromFile("level20_sc3.txt"));
-
-
-
-        btn_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Scores_Activity.this,MainActivity.class));
-                finish();
-            }
-        });
-
-    }
-
-    public String readFromFile(String fileName){
-        File path = getApplicationContext().getFilesDir();
-        File readFrom = new File(path, fileName);
-        byte[] content = new byte[(int) readFrom.length()];
-        try {
-            FileInputStream stream = new FileInputStream(readFrom);
-            stream.read(content);
-            return new String(content);
-        }catch (Exception e){
-            e.printStackTrace();
-            return e.toString();
-        }
-
     }
 
 

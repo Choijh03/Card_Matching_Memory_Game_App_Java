@@ -32,29 +32,39 @@
         android:textSize="25dp"
         android:id="@+id/score_edit"
         android:textColor="@color/black"
-        android:padding="10dp"/>
+        android:padding="10dp" />
 
     <Button
+        android:id="@+id/tryAgain_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tryAgain_btn"
-        android:text="Try Again"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/game_button_layout"
-        android:layout_below="@+id/play_btn"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginTop="50dp"
-        android:layout_marginBottom="55dp"/>
+        android:layout_marginBottom="50dp"
+        android:text="Try Again"
+        android:layout_marginLeft="50dp"/>
+
+    <Button
+        android:id="@+id/newGame_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="New Game"
+        />
 
     <Button
         android:id="@+id/endGame_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
         android:layout_marginBottom="50dp"
         android:layout_marginTop="50dp"
-        android:text="End Game" />
+        android:layout_alignParentRight="true"
+        android:text="End Game"
+        android:layout_marginRight="50dp"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
