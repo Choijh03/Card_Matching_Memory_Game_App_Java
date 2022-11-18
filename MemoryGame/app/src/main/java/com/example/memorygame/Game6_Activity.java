@@ -312,6 +312,7 @@ public class Game6_Activity extends AppCompatActivity {
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     Intent intent = new Intent(getApplicationContext(), Game6_Activity.class);
                                     startActivity(intent);
+                                    stop();
                                     finish();
                                 }
                             })
@@ -319,6 +320,7 @@ public class Game6_Activity extends AppCompatActivity {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     startActivity(new Intent(Game6_Activity.this,MainActivity.class));
+                                    stop();
                                     finish();
                                 }
                             });
@@ -434,6 +436,12 @@ public class Game6_Activity extends AppCompatActivity {
     public void play(){
         if(player == null){
             player = MediaPlayer.create(this, R.raw.music1);
+            player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mediaPlayer) {
+                    stopPlayer();
+                }
+            });
         }
         player.start();
     }
@@ -442,5 +450,22 @@ public class Game6_Activity extends AppCompatActivity {
         if(player != null){
             player.pause();
         }
+    }
+
+    public void stop(){
+        stopPlayer();
+    }
+
+    private void stopPlayer(){
+        if(player != null){
+            player.release();
+            player = null;
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        stopPlayer();
     }
 }
