@@ -244,7 +244,7 @@ public class Game6_Activity extends AppCompatActivity {
             }
 
             //add pts;
-            points++;
+            points=points+2;
             score.setText("Score: " + points);
 
         }else{

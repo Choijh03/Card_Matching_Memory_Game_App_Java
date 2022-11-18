@@ -22,7 +22,9 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:orientation="vertical"
-               android:padding="10dp">
+               android:padding="10dp"
+               android:layout_marginLeft="30dp"
+               android:layout_marginRight="10dp">
                <TextView
                    android:textStyle="bold"
                    android:textSize="20dp"
@@ -39,7 +41,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Initial1"
+                       android:text="In1"
                        android:id="@+id/tv_level4_initial1"/>
                    <TextView
                        android:layout_width="wrap_content"
@@ -48,7 +50,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Score1"
+                       android:text="S"
                        android:id="@+id/tv_level4_score1" />
                </LinearLayout>
                <LinearLayout
@@ -59,7 +61,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Initial2"
+                       android:text="In2"
                        android:id="@+id/tv_level4_initial2"
                        />
                    <TextView
@@ -69,7 +71,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Score2"
+                       android:text="S"
                        android:id="@+id/tv_level4_score2"
                        />
                </LinearLayout>
@@ -81,7 +83,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Initial3"
+                       android:text="In3"
                        android:id="@+id/tv_level4_initial3"
                        />
                    <TextView
@@ -91,7 +93,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Score3"
+                       android:text="S"
                        android:id="@+id/tv_level4_score3"
                        />
                </LinearLayout>
@@ -102,7 +104,9 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:orientation="vertical"
-               android:padding="10dp">
+               android:padding="10dp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginRight="10dp">
                <TextView
                    android:textStyle="bold"
                    android:textSize="20dp"
@@ -183,7 +187,9 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:orientation="vertical"
-               android:padding="10dp">
+               android:padding="10dp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginRight="10dp">
                <TextView
                    android:textStyle="bold"
                    android:textSize="20dp"
@@ -270,7 +276,9 @@
                android:layout_width="wrap_content"
                android:layout_height="200dp"
                android:orientation="vertical"
-               android:padding="10dp">
+               android:padding="10dp"
+               android:layout_marginLeft="30dp"
+               android:layout_marginRight="10dp">
                <TextView
                    android:textStyle="bold"
                    android:textSize="20dp"
@@ -287,7 +295,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Initial1"
+                       android:text="In1"
                        android:id="@+id/tv_level10_initial1"/>
                    <TextView
                        android:layout_width="wrap_content"
@@ -296,7 +304,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Score1"
+                       android:text="S"
                        android:id="@+id/tv_level10_score1" />
                </LinearLayout>
                <LinearLayout
@@ -307,7 +315,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Initial2"
+                       android:text="In2"
                        android:id="@+id/tv_level10_initial2"
                        />
                    <TextView
@@ -317,7 +325,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Score2"
+                       android:text="S"
                        android:id="@+id/tv_level10_score2"
                        />
                </LinearLayout>
@@ -329,7 +337,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Initial3"
+                       android:text="In3"
                        android:id="@+id/tv_level10_initial3"
                        />
                    <TextView
@@ -339,7 +347,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Score3"
+                       android:text="S"
                        android:id="@+id/tv_level10_score3"
                        />
                </LinearLayout>
@@ -350,7 +358,9 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:orientation="vertical"
-               android:padding="10dp">
+               android:padding="10dp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginRight="10dp">
                <TextView
                    android:textStyle="bold"
                    android:textSize="20dp"
@@ -367,7 +377,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Initial1"
+                       android:text="In1"
                        android:id="@+id/tv_level12_initial1"/>
                    <TextView
                        android:layout_width="wrap_content"
@@ -376,7 +386,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Score1"
+                       android:text="S"
                        android:id="@+id/tv_level12_score1" />
                </LinearLayout>
                <LinearLayout
@@ -387,7 +397,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Initial2"
+                       android:text="In2"
                        android:id="@+id/tv_level12_initial2"
                        />
                    <TextView
@@ -397,7 +407,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Score2"
+                       android:text="S2"
                        android:id="@+id/tv_level12_score2"
                        />
                </LinearLayout>
@@ -409,7 +419,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Initial3"
+                       android:text="In3"
                        android:id="@+id/tv_level12_initial3"
                        />
                    <TextView
@@ -419,7 +429,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Score3"
+                       android:text="S"
                        android:id="@+id/tv_level12_score3"
                        />
                </LinearLayout>
@@ -432,7 +442,9 @@
                android:layout_height="wrap_content"
                android:orientation="vertical"
                android:padding="10dp"
-               android:layout_marginBottom="15dp">
+               android:layout_marginBottom="15dp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginRight="10dp">
                <TextView
                    android:textStyle="bold"
                    android:textSize="20dp"
@@ -518,7 +530,9 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:orientation="vertical"
-               android:padding="10dp">
+               android:padding="10dp"
+               android:layout_marginLeft="30dp"
+               android:layout_marginRight="10dp">
                <TextView
                    android:textStyle="bold"
                    android:textSize="20dp"
@@ -535,7 +549,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Initial1"
+                       android:text="In1"
                        android:id="@+id/tv_level16_initial1"/>
                    <TextView
                        android:layout_width="wrap_content"
@@ -544,7 +558,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Score1"
+                       android:text="S"
                        android:id="@+id/tv_level16_score1" />
                </LinearLayout>
                <LinearLayout
@@ -555,7 +569,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Initial2"
+                       android:text="In2"
                        android:id="@+id/tv_level16_initial2"
                        />
                    <TextView
@@ -565,7 +579,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Score2"
+                       android:text="S2"
                        android:id="@+id/tv_level16_score2"
                        />
                </LinearLayout>
@@ -577,7 +591,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Initial3"
+                       android:text="In3"
                        android:id="@+id/tv_level16_initial3"
                        />
                    <TextView
@@ -587,7 +601,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Score3"
+                       android:text="S"
                        android:id="@+id/tv_level16_score3"
                        />
                </LinearLayout>
@@ -598,7 +612,9 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:orientation="vertical"
-               android:padding="10dp">
+               android:padding="10dp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginRight="10dp">
                <TextView
                    android:textStyle="bold"
                    android:textSize="20dp"
@@ -615,7 +631,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Initial1"
+                       android:text="In1"
                        android:id="@+id/tv_level18_initial1"/>
                    <TextView
                        android:layout_width="wrap_content"
@@ -624,7 +640,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Score1"
+                       android:text="S"
                        android:id="@+id/tv_level18_score1" />
                </LinearLayout>
                <LinearLayout
@@ -635,7 +651,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Initial2"
+                       android:text="In2"
                        android:id="@+id/tv_level18_initial2"
                        />
                    <TextView
@@ -645,7 +661,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Score2"
+                       android:text="S"
                        android:id="@+id/tv_level18_score2"
                        />
                </LinearLayout>
@@ -657,7 +673,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Initial3"
+                       android:text="In3"
                        android:id="@+id/tv_level18_initial3"
                        />
                    <TextView
@@ -667,7 +683,7 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Score3"
+                       android:text="S"
                        android:id="@+id/tv_level18_score3"
                        />
                </LinearLayout>
@@ -713,7 +729,8 @@
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:orientation="horizontal"
-                   android:layout_marginBottom="15dp">
+                   android:layout_marginBottom="15dp"
+                   >
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
@@ -728,8 +745,7 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="Score2"
-                       android:id="@+id/tv_level20_score2"
-                       />
+                       android:id="@+id/tv_level20_score2" />
                </LinearLayout>
                <LinearLayout
                    android:layout_width="wrap_content"
