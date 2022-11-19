@@ -732,7 +732,7 @@ public class Game10_Activity extends AppCompatActivity {
     // No need to change
     public void play(){
         if(player == null){
-            player = MediaPlayer.create(this, R.raw.music1);
+            player = MediaPlayer.create(this, R.raw.music4);
             player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
                 public void onCompletion(MediaPlayer mediaPlayer) {
