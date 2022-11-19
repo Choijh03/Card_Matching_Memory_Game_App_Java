@@ -38,10 +38,10 @@
         android:id="@+id/tryAgain_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:text="Try Again"
+        android:layout_marginRight="10dp"
         android:layout_marginLeft="50dp"/>
 
     <Button
@@ -51,7 +51,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
-        android:layout_centerHorizontal="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="50dp"
         android:text="New Game"
         />
 
@@ -64,7 +65,7 @@
         android:layout_marginTop="50dp"
         android:layout_alignParentRight="true"
         android:text="End Game"
-        android:layout_marginRight="50dp"/>
+        android:layout_marginRight="40dp"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -81,17 +82,25 @@
             android:orientation="horizontal"
             android:gravity="center">
             <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="130dp"
+                android:layout_height="140dp"
                 android:id="@+id/btn0"
                 android:textStyle="bold"
                 android:textSize="18dp"
                 android:padding="10dp"
                 android:src="@drawable/ic_back"/>
             <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="130dp"
+                android:layout_height="140dp"
                 android:id="@+id/btn1"
+                android:src="@drawable/ic_back"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:padding="10dp" />
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="140dp"
+                android:id="@+id/btn2"
                 android:src="@drawable/ic_back"
                 android:textStyle="bold"
                 android:textSize="18dp"
@@ -103,47 +112,34 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center">
+
             <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:id="@+id/btn2"
-                android:src="@drawable/ic_back"
-                android:textStyle="bold"
-                android:textSize="18dp"
-                android:padding="10dp" />
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="130dp"
+                android:layout_height="140dp"
                 android:id="@+id/btn3"
                 android:src="@drawable/ic_back"
                 android:textStyle="bold"
                 android:textSize="18dp"
                 android:tag="3"
                 android:padding="10dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
             <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="130dp"
+                android:layout_height="140dp"
                 android:id="@+id/btn4"
                 android:src="@drawable/ic_back"
                 android:textStyle="bold"
                 android:textSize="18dp"
                 android:padding="10dp" />
             <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="130dp"
+                android:layout_height="140dp"
                 android:id="@+id/btn5"
                 android:src="@drawable/ic_back"
                 android:textStyle="bold"
                 android:textSize="18dp"
                 android:padding="10dp" />
         </LinearLayout>
+
 
     </LinearLayout>
 

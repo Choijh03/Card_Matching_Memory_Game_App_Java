@@ -5,11 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import org.jetbrains.annotations.NotNull;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         btn4 = findViewById(R.id.size_4_btn);
         btn6 = findViewById(R.id.size_6_btn);
@@ -30,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         btn18 = findViewById(R.id.size_18_btn);
         btn20 = findViewById(R.id.size_20_btn);
         scores_btn = findViewById(R.id.scores_btn);
+
 
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,5 +116,7 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
     }
+
 }

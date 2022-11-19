@@ -1,5 +1,6 @@
 package com.example.memorygame;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +9,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -49,6 +51,8 @@ public class Game6_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game6);
+        
+
 
         play_btn = findViewById(R.id.play_btn);
         pause_btn = findViewById(R.id.pause_btn);
@@ -185,6 +189,13 @@ public class Game6_Activity extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState){
+        super.onSaveInstanceState(outState);
+    }
+
+
 
     //check which image is selected and save it to temp variable
     private void doStuff(ImageView btn, int card){
@@ -519,7 +530,7 @@ public class Game6_Activity extends AppCompatActivity {
     public void getUserName(){
         AlertDialog.Builder alert = new AlertDialog.Builder(Game6_Activity.this);
         alert.setTitle("GAME OVER!\nScore: " + points);
-        alert.setMessage("Please enter 3 initials, if Cancel clicked, it's set to zzz");
+        alert.setMessage("Please enter 3 initials, if Cancel clicked, it's set to zzz.\nIf you don't enter anything and Enter clicked, score will not be saved.");
         // Set an EditText view to get user input
         final EditText input = new EditText(Game6_Activity.this);
         alert.setView(input);

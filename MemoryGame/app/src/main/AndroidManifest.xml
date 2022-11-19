@@ -21,6 +21,7 @@
         </activity>
         <activity
             android:name=".Game20_Activity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -28,6 +29,7 @@
         </activity>
         <activity
             android:name=".Game18_Activity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -35,6 +37,7 @@
         </activity>
         <activity
             android:name=".Game16_Activity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -42,6 +45,7 @@
         </activity>
         <activity
             android:name=".Game14_Activity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -49,6 +53,7 @@
         </activity>
         <activity
             android:name=".Game12_Activity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -56,6 +61,7 @@
         </activity>
         <activity
             android:name=".Game10_Activity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -63,6 +69,7 @@
         </activity>
         <activity
             android:name=".Game8_Activity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -70,6 +77,7 @@
         </activity>
         <activity
             android:name=".Game6_Activity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -77,6 +85,7 @@
         </activity>
         <activity
             android:name=".Game4_Activity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
