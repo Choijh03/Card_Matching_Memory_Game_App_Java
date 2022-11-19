@@ -17,6 +17,7 @@ public class Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        //creating files and writing data in internal drive
         writeToFile("level4_init1.txt", "avd");
         writeToFile("level4_init2.txt", "dhj");
         writeToFile("level4_init3.txt", "bdd");
@@ -80,6 +81,7 @@ public class Splash extends AppCompatActivity {
         writeToFile("level20_sc2.txt", "10");
         writeToFile("level20_sc3.txt", "0");
 
+        //giving 3 seconds delay of splash screen with loading bard
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -89,6 +91,8 @@ public class Splash extends AppCompatActivity {
         },3000);
     }
 
+    // method: writeToFile
+    // purpose: this method is to write the data into internal storage by accepting filename and data
     public void writeToFile(String fileName, String content){
         File path = getApplicationContext().getFilesDir();
         try {

@@ -17,6 +17,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Declarations
     Button btn4,btn6,btn8,btn10,btn12,btn14,btn16,btn18,btn20,scores_btn;
 
     @Override
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        //Connecting variables with correct objects
         btn4 = findViewById(R.id.size_4_btn);
         btn6 = findViewById(R.id.size_6_btn);
         btn8 = findViewById(R.id.size_8_btn);
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         btn20 = findViewById(R.id.size_20_btn);
         scores_btn = findViewById(R.id.scores_btn);
 
-
+        //when btn4 clicked, do
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //when btn6 clicked, do
         btn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //when btn8 clicked, do
         btn8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //when btn10 clicked, do
         btn10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //when btn12 clicked, do
         btn12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //when btn14 clicked, do
         btn14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -85,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //when btn16 clicked, do
         btn16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -93,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //when btn18 clicked, do
         btn18.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //when btn20 clicked, do
         btn20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -109,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //when scores_btn clicked, do
         scores_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

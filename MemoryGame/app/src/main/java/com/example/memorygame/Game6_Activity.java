@@ -25,16 +25,18 @@ import java.util.Collections;
 
 public class Game6_Activity extends AppCompatActivity {
 
+    //Declarations(Change it depending on size of cards)
     ImageView btn0,btn1,btn2,btn3,btn4,btn5;
     Button play_btn, pause_btn,tryAgain_btn,newGame_btn,endGame_btn;
     MediaPlayer player;
     TextView score;
 
-    //Array for 6 images
+    //Array for 6 images(Change it depending on size of cards)
     Integer[] cardsArray = {101,102,103,201,202,203};
     //Actual images
     int image101,image102,image103,image201,image202,image203;
 
+    //Necessary Variables(no Changed needed)
     int firstCard, secondCard;
     int clickedFirst, clickedSecond;
     int cardNumber = 1;
@@ -51,9 +53,9 @@ public class Game6_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game6);
-        
 
-
+        //Connecting variables with correct objects(Change it depending on size of cards)
+        //Change it depending on size of cards
         play_btn = findViewById(R.id.play_btn);
         pause_btn = findViewById(R.id.pause_btn);
         btn0 = (ImageView) findViewById(R.id.btn0);
@@ -67,6 +69,8 @@ public class Game6_Activity extends AppCompatActivity {
         newGame_btn = findViewById(R.id.newGame_btn);
         score = (TextView) findViewById(R.id.score_edit);
 
+        //setting number tags for each ImageView(Change it depending on size of cards)
+        //Change it depending on size of cards
         btn0.setTag("0");
         btn1.setTag("1");
         btn2.setTag("2");
@@ -74,6 +78,8 @@ public class Game6_Activity extends AppCompatActivity {
         btn4.setTag("4");
         btn5.setTag("5");
 
+        //reading the score data from internal storage(Change it depending on level)
+        //Change it depending on which level
         stringScore1 = readFromFile("level6_sc1.txt");
         stringScore2 = readFromFile("level6_sc2.txt");
         stringScore3 = readFromFile("level6_sc3.txt");
@@ -81,12 +87,19 @@ public class Game6_Activity extends AppCompatActivity {
         score2 = Integer.parseInt(stringScore2);
         score3 = Integer.parseInt(stringScore3);
 
+        //show basic rules for the game
+        //No need to change
+        gameExplanation();
 
         //load the card images
+        //No need to change
         frontOfCardsResources();
         //shuffle the card array
+        //No need to change
         Collections.shuffle(Arrays.asList(cardsArray));
 
+        //when play_btn clicked, do
+        //No need to change
         play_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -94,6 +107,8 @@ public class Game6_Activity extends AppCompatActivity {
             }
         });
 
+        //when pause_btn clicked, do
+        //No need to change
         pause_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,6 +116,8 @@ public class Game6_Activity extends AppCompatActivity {
             }
         });
 
+        //when btn0 clicked, do
+        //No need to change
         btn0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -109,6 +126,8 @@ public class Game6_Activity extends AppCompatActivity {
             }
         });
 
+        //when btn1 clicked, do
+        //No need to change
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -117,6 +136,8 @@ public class Game6_Activity extends AppCompatActivity {
             }
         });
 
+        //when btn2 clicked, do
+        //No need to change
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -125,6 +146,8 @@ public class Game6_Activity extends AppCompatActivity {
             }
         });
 
+        //when btn3 clicked, do
+        //No need to change
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -133,6 +156,8 @@ public class Game6_Activity extends AppCompatActivity {
             }
         });
 
+        //when btn4 clicked, do
+        //No need to change
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -141,6 +166,8 @@ public class Game6_Activity extends AppCompatActivity {
             }
         });
 
+        //when btn5 clicked, do
+        //No need to change
         btn5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -149,6 +176,8 @@ public class Game6_Activity extends AppCompatActivity {
             }
         });
 
+        //when tryAgain_btn clicked, do
+        //No need to change
         tryAgain_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -156,6 +185,8 @@ public class Game6_Activity extends AppCompatActivity {
             }
         });
 
+        //when endGame_btn clicked, do
+        //Change it depending on which Activity
         endGame_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -176,6 +207,8 @@ public class Game6_Activity extends AppCompatActivity {
             }
         });
 
+        //when newGame_btn clicked, do
+        //Change it depending on which Activity
         newGame_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -190,14 +223,9 @@ public class Game6_Activity extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onSaveInstanceState(Bundle outState){
-        super.onSaveInstanceState(outState);
-    }
-
-
-
-    //check which image is selected and save it to temp variable
+    // method: doStuff
+    // purpose: this method is to check which image is selected and save it to temp variable
+    // Change it depending on size of cards
     private void doStuff(ImageView btn, int card){
         if(cardsArray[card] == 101){
             btn.setImageResource(image101);
@@ -213,6 +241,7 @@ public class Game6_Activity extends AppCompatActivity {
             btn.setImageResource(image203);
         }
 
+        //setting firstCard
         if(cardNumber ==1){
             firstCard = cardsArray[card];
             if(firstCard > 200){
@@ -221,6 +250,7 @@ public class Game6_Activity extends AppCompatActivity {
             cardNumber = 2;
             clickedFirst = card;
             btn.setEnabled(false);
+            //setting secondCard
         } else if(cardNumber ==2){
             secondCard = cardsArray[card];
             if(secondCard > 200){
@@ -247,6 +277,9 @@ public class Game6_Activity extends AppCompatActivity {
         }
     }
 
+    // method: calculate
+    // purpose: this method is to check if two images are selected are equal or not
+    // Change it depending on size of cards
     private void calculate(){
         //if images are equal, remove them and add points
         if(firstCard == secondCard) {
@@ -278,12 +311,12 @@ public class Game6_Activity extends AppCompatActivity {
                 btn5.setVisibility(View.INVISIBLE);
             }
 
-            //add pts;
+            //add 2pts;
             points=points+2;
             score.setText("Score: " + points);
 
         }else{
-            //need to deduct pts
+            //deduct 1pts
             points--;
             if(points < 0){
                 points = 0;
@@ -309,6 +342,9 @@ public class Game6_Activity extends AppCompatActivity {
         checkEnd();
     }
 
+    // method: flipCardBack
+    // purpose: this method is to set the card images back to original
+    // Change it depending on size of cards
     private void flipCardBack(){
         btn0.setImageResource(R.drawable.ic_back);
         btn1.setImageResource(R.drawable.ic_back);
@@ -325,6 +361,9 @@ public class Game6_Activity extends AppCompatActivity {
         btn5.setEnabled(true);
     }
 
+    // method: checkEnd
+    // purpose: this method is to check the game process if it's ended
+    // Change it depending on size of cards
     private void checkEnd(){
         if(btn0.getVisibility() ==View.INVISIBLE &&
                 btn1.getVisibility() ==View.INVISIBLE &&
@@ -344,6 +383,9 @@ public class Game6_Activity extends AppCompatActivity {
         }
     }
 
+    // method: frontOfCardsResources
+    // purpose: this method is to set card variable to corresponding image resource
+    // Change it depending on size of cards
     private void frontOfCardsResources() {
         image101 = R.drawable.ic_image101;
         image102 = R.drawable.ic_image102;
@@ -353,6 +395,9 @@ public class Game6_Activity extends AppCompatActivity {
         image203 = R.drawable.ic_image203;
     }
 
+    // method: showAnswer
+    // purpose: this method is to show the answer to each corresponding card
+    // Change it depending on size of cards
     private void showAnswer(){
         if(cardsArray[0]==101){
             btn0.setImageResource(R.drawable.ic_image101);
@@ -446,6 +491,9 @@ public class Game6_Activity extends AppCompatActivity {
         btn5.setVisibility(View.VISIBLE);
     }
 
+    // method: play
+    // purpose: this method is to create and play music, it gets destroyed when Activity is completed
+    // No need to change
     public void play(){
         if(player == null){
             player = MediaPlayer.create(this, R.raw.music1);
@@ -459,16 +507,25 @@ public class Game6_Activity extends AppCompatActivity {
         player.start();
     }
 
+    // method: pause
+    // purpose: this method is to pause the music
+    // No need to change
     public void pause(){
         if(player != null){
             player.pause();
         }
     }
 
+    // method: stop
+    // purpose: this method is to stop the music by stopPlayer method
+    // No need to change
     public void stop(){
         stopPlayer();
     }
 
+    // method: stop
+    // purpose: this method is to stop the music by setting player to null
+    // No need to change
     private void stopPlayer(){
         if(player != null){
             player.release();
@@ -476,12 +533,18 @@ public class Game6_Activity extends AppCompatActivity {
         }
     }
 
+    // method: onStop
+    // purpose: this method is to stop the music when player is stopped
+    // No need to change
     @Override
     protected void onStop() {
         super.onStop();
         stopPlayer();
     }
 
+    // method: readFromFile
+    // purpose: this method is to read the data from internal storage
+    // No need to change
     public String readFromFile(String fileName){
         File path = getApplicationContext().getFilesDir();
         File readFrom = new File(path, fileName);
@@ -496,6 +559,9 @@ public class Game6_Activity extends AppCompatActivity {
         }
     }
 
+    // method: writeToFile
+    // purpose: this method is to write the data into internal storage by accepting filename and data
+    // No need to change
     public void writeToFile(String fileName, String content){
         File path = getApplicationContext().getFilesDir();
         try {
@@ -508,6 +574,9 @@ public class Game6_Activity extends AppCompatActivity {
         }
     }
 
+    // method: updateScoreBoard
+    // purpose: this method is to write the new score data into internal storage by using writeToFile method
+    // Change it depending on which level
     public void updateScoreBoard(){
         if(points> score1){
             //write initials
@@ -527,6 +596,9 @@ public class Game6_Activity extends AppCompatActivity {
         }
     }
 
+    // method: getUserName
+    // purpose: this method is to show final score and get user name by using dialogue
+    // Change it depending on which Activity
     public void getUserName(){
         AlertDialog.Builder alert = new AlertDialog.Builder(Game6_Activity.this);
         alert.setTitle("GAME OVER!\nScore: " + points);
@@ -545,6 +617,22 @@ public class Game6_Activity extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int whichButton) {
                 // Canceled.
                 userName_string = "zzz";
+            }
+        });
+        alert.show();
+    }
+
+    // method: gameExplanation
+    // purpose: this method is to show the rules for the game by using dialogue
+    // Change it depending on which Activity
+    public void gameExplanation(){
+        AlertDialog.Builder alert = new AlertDialog.Builder(Game6_Activity.this);
+        alert.setTitle("Basic Rules");
+        alert.setMessage("*Correct match +2pts.\n*Wrong match -1pts.\n*Click try again btn to flip the card back to original.\n*Click play btn to start background music." +
+                "\n*Click pause btn to pause the music.\n*Click new game btn to start new game.\n*Click end game btn to end the game." +
+                "\n\n*Be aware that there is few seconds of delay between actions\n*If any error happens, click try again btn and re-try to click the images.");
+        alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
             }
         });
         alert.show();

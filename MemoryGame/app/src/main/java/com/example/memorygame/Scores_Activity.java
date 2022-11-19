@@ -17,6 +17,7 @@ import java.io.InputStreamReader;
 
 public class Scores_Activity extends AppCompatActivity {
 
+    //Declarations
     Button btn_back;
     TextView tv_level4_initial1, tv_level4_initial2, tv_level4_initial3, tv_level6_initial1, tv_level6_initial2, tv_level6_initial3,
             tv_level8_initial1, tv_level8_initial2, tv_level8_initial3, tv_level10_initial1, tv_level10_initial2, tv_level10_initial3,
@@ -33,6 +34,7 @@ public class Scores_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scores);
 
+        //Connecting variables with correct objects
         btn_back = findViewById(R.id.btn_back);
         tv_level4_initial1 = (TextView) findViewById(R.id.tv_level4_initial1);
         tv_level4_initial2 = (TextView) findViewById(R.id.tv_level4_initial2);
@@ -97,10 +99,10 @@ public class Scores_Activity extends AppCompatActivity {
         tv_level20_score2 = (TextView) findViewById(R.id.tv_level20_score2);
         tv_level20_score3 = (TextView) findViewById(R.id.tv_level20_score3);
 
-
+        //reading scores and setting it to each text view
         readScores();
 
-
+        //when back_btn clicked, do
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -111,6 +113,8 @@ public class Scores_Activity extends AppCompatActivity {
 
     }
 
+    // method: readFromFile
+    // purpose: this method is to read the data from internal storage
     public String readFromFile(String fileName){
         File path = getApplicationContext().getFilesDir();
         File readFrom = new File(path, fileName);
@@ -125,6 +129,8 @@ public class Scores_Activity extends AppCompatActivity {
         }
     }
 
+    // method: readScores
+    // purpose: this method is to set each text view with corresponding data by using readFromFile method
     public void readScores(){
         tv_level4_initial1.setText(readFromFile("level4_init1.txt"));
         tv_level4_initial2.setText(readFromFile("level4_init2.txt"));

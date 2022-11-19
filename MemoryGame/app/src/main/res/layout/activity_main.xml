@@ -34,8 +34,6 @@
         android:text="Scores"
         android:id="@+id/scores_btn"
         android:textStyle="bold"
-        android:textColor="@color/white"
-        android:background="@color/black"
         android:layout_marginTop="50dp"
         android:padding="18dp"/>
 
