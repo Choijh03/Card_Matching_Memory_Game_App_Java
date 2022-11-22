@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -538,6 +539,24 @@ public class Game4_Activity extends AppCompatActivity {
             }
         });
         alert.show();
+    }
+
+    // method: onOptionsItemSelected
+    // purpose: this method is overwritten to have correct up button function
+    // Change it depending on which Activity
+    @Override
+    public boolean onOptionsItemSelected(final MenuItem item) {
+
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                stop();
+                startActivity(new Intent(Game4_Activity.this,MainActivity.class));
+                finish();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
 }

@@ -14,82 +14,112 @@
         tools:targetApi="31">
         <activity
             android:name=".Scores_Activity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:label="Score Activity"
             android:exported="false">
             <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".Game20_Activity"
             android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:label="Game20 Activity"
+            android:parentActivityName=".MainActivity"
             android:exported="false">
             <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".Game18_Activity"
             android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:label="Game18 Activity"
+            android:parentActivityName=".MainActivity"
             android:exported="false">
             <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".Game16_Activity"
             android:configChanges="keyboardHidden|orientation|screenSize"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:label="Game16 Activity"
             android:exported="false">
             <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".Game14_Activity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:label="Game14 Activity"
             android:configChanges="keyboardHidden|orientation|screenSize"
+            android:parentActivityName=".MainActivity"
             android:exported="false">
             <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".Game12_Activity"
             android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:label="Game12 Activity"
+            android:parentActivityName=".MainActivity"
             android:exported="false">
             <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".Game10_Activity"
             android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:label="Game10 Activity"
+            android:parentActivityName=".MainActivity"
             android:exported="false">
             <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".Game8_Activity"
             android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:label="Game8 Activity"
+            android:parentActivityName=".MainActivity"
             android:exported="false">
             <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".Game6_Activity"
             android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:label="Game6 Activity"
+            android:parentActivityName=".MainActivity"
             android:exported="false">
             <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".Game4_Activity"
             android:configChanges="keyboardHidden|orientation|screenSize"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:label="Game4 Activity"
             android:exported="false">
             <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".MainActivity"
@@ -103,7 +133,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -196,6 +197,22 @@ public class Scores_Activity extends AppCompatActivity {
         tv_level20_score3.setText(readFromFile("level20_sc3.txt"));
     }
 
+    // method: onOptionsItemSelected
+    // purpose: this method is overwritten to have correct up button function
+    // Change it depending on which Activity
+    @Override
+    public boolean onOptionsItemSelected(final MenuItem item) {
+
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                startActivity(new Intent(Scores_Activity.this,MainActivity.class));
+                finish();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
 
 
