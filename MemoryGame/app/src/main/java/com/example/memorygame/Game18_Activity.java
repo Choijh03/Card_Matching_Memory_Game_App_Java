@@ -1582,7 +1582,7 @@ public class Game18_Activity extends AppCompatActivity {
     public void getUserName(){
         AlertDialog.Builder alert = new AlertDialog.Builder(Game18_Activity.this);
         alert.setTitle("GAME OVER!\nScore: " + points);
-        alert.setMessage("Please enter 3 initials, if Cancel clicked, it's set to zzz.\nIf you don't enter anything and Enter clicked, score will not be saved.");
+        alert.setMessage("Please enter 3 initials, if Cancel clicked, it's set to zzz.\nIf you don't enter anything and Ok clicked, score will not be saved.");
         // Set an EditText view to get user input
         final EditText input = new EditText(Game18_Activity.this);
         alert.setView(input);
@@ -1590,7 +1590,11 @@ public class Game18_Activity extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int whichButton) {
                 String value = String.valueOf(input.getText());
                 // Do something with value!
-                userName_string = value;
+                String temp ="";
+                for (int i = 0; i < 3; i++) {
+                    temp += value.charAt(i);
+                }
+                userName_string = temp;
             }
         });
         alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
