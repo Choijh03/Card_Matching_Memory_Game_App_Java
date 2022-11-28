@@ -709,19 +709,37 @@ public class Game8_Activity extends AppCompatActivity {
     public void getUserName(){
         AlertDialog.Builder alert = new AlertDialog.Builder(Game8_Activity.this);
         alert.setTitle("GAME OVER!\nScore: " + points);
-        alert.setMessage("Please enter 3 initials, if Cancel clicked, it's set to zzz.\nIf you don't enter anything and Ok clicked, score will not be saved.");
+        alert.setMessage("Please enter 3 initials\nIf CANCEL clicked, it's set to zzz.\nIf nothing entered and OK clicked, it's set to zzz." +
+                "\nIf 1 letter entered and OK clicked, it's set to 1 letter + zz."+
+                "\nIf 2 letter entered and OK clicked, it's set to 2 letter + z."+
+                "\nIf more than 3 letter entered and OK clicked, it's set to first 3 letters.");
         // Set an EditText view to get user input
         final EditText input = new EditText(Game8_Activity.this);
         alert.setView(input);
         alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
                 String value = String.valueOf(input.getText());
-                // Do something with value!
-                String temp ="";
-                for (int i = 0; i < 3; i++) {
-                    temp += value.charAt(i);
+                userName_string = value;
+                if(userName_string.equals(""))
+                {
+                    userName_string = "zzz";
                 }
-                userName_string = temp;
+                else if(userName_string.length()==1)
+                {
+                    userName_string += "zz";
+                }
+                else if(userName_string.length()==2)
+                {
+                    userName_string += "z";
+                }
+                else if(userName_string.length()>3)
+                {
+                    String temp = "";
+                    for (int i = 0; i < 3; i++) {
+                        temp += userName_string.charAt(i);
+                    }
+                    userName_string = temp;
+                }
                 updateScoreBoard();
             }
         });
