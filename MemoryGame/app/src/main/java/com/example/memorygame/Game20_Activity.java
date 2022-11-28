@@ -362,9 +362,6 @@ public class Game20_Activity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        if(!userName_string.equals("")){
-                            updateScoreBoard();
-                        }
                         stop();
                         startActivity(new Intent(Game20_Activity.this,MainActivity.class));
                         finish();
@@ -378,9 +375,6 @@ public class Game20_Activity extends AppCompatActivity {
         newGame_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!userName_string.equals("")){
-                    updateScoreBoard();
-                }
                 stop();
                 startActivity(new Intent(Game20_Activity.this,Game20_Activity.class));
                 finish();
@@ -1733,12 +1727,14 @@ public class Game20_Activity extends AppCompatActivity {
                     temp += value.charAt(i);
                 }
                 userName_string = temp;
+                updateScoreBoard();
             }
         });
         alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
                 // Canceled.
                 userName_string = "zzz";
+                updateScoreBoard();
             }
         });
         alert.show();
