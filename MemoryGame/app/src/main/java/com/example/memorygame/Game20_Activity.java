@@ -701,11 +701,15 @@ public class Game20_Activity extends AppCompatActivity {
                 btn19.getVisibility() ==View.INVISIBLE){
             showAnswer();
             tryAgain_btn.setEnabled(false);
+            newGame_btn.setEnabled(false);
+            endGame_btn.setEnabled(false);
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     getUserName();
+                    newGame_btn.setEnabled(true);
+                    endGame_btn.setEnabled(true);
                 }
             }, 3000);
         }

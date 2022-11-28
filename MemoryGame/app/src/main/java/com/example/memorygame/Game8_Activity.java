@@ -212,7 +212,6 @@ public class Game8_Activity extends AppCompatActivity {
         endGame_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 showAnswer();
                 Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
@@ -413,11 +412,15 @@ public class Game8_Activity extends AppCompatActivity {
                 btn7.getVisibility() ==View.INVISIBLE){
             showAnswer();
             tryAgain_btn.setEnabled(false);
+            newGame_btn.setEnabled(false);
+            endGame_btn.setEnabled(false);
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     getUserName();
+                    newGame_btn.setEnabled(true);
+                    endGame_btn.setEnabled(true);
                 }
             }, 3000);
         }
