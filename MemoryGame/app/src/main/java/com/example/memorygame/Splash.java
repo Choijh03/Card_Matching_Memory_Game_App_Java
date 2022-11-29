@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.widget.Toast;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
 public class Splash extends AppCompatActivity {
@@ -17,6 +18,33 @@ public class Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        //giving 3 seconds delay of splash screen with loading bard
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                startActivity(new Intent(Splash.this,MainActivity.class));
+                finish();
+            }
+        },3000);
+    }
+
+    // method: writeToFile
+    // purpose: this method is to write the data into internal storage by accepting filename and data
+    public void writeToFile(String fileName, String content){
+        File path = getApplicationContext().getFilesDir();
+        try {
+            FileOutputStream writer = new FileOutputStream(new File(path, fileName));
+            writer.write(content.getBytes());
+            writer.close();
+            //Toast.makeText(getApplicationContext(), "Wrote to file: " + fileName, Toast.LENGTH_SHORT).show();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    // method: writeScores
+    // purpose: this method is to write score data into internal storage
+    public void writeScores(){
         //creating files and writing data in internal drive
         writeToFile("level4_init1.txt", "avd");
         writeToFile("level4_init2.txt", "dhj");
@@ -80,29 +108,6 @@ public class Splash extends AppCompatActivity {
         writeToFile("level20_sc1.txt", "20");
         writeToFile("level20_sc2.txt", "10");
         writeToFile("level20_sc3.txt", "0");
-
-        //giving 3 seconds delay of splash screen with loading bard
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(Splash.this,MainActivity.class));
-                finish();
-            }
-        },3000);
-    }
-
-    // method: writeToFile
-    // purpose: this method is to write the data into internal storage by accepting filename and data
-    public void writeToFile(String fileName, String content){
-        File path = getApplicationContext().getFilesDir();
-        try {
-            FileOutputStream writer = new FileOutputStream(new File(path, fileName));
-            writer.write(content.getBytes());
-            writer.close();
-            //Toast.makeText(getApplicationContext(), "Wrote to file: " + fileName, Toast.LENGTH_SHORT).show();
-        } catch (Exception e){
-            e.printStackTrace();
-        }
     }
 
 }
