@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -358,11 +359,14 @@ public class Game20_Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 showAnswer();
+                getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
+                        WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
                 Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         stop();
+                        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
                         startActivity(new Intent(Game20_Activity.this,MainActivity.class));
                         finish();
                     }
@@ -703,10 +707,13 @@ public class Game20_Activity extends AppCompatActivity {
             tryAgain_btn.setEnabled(false);
             newGame_btn.setEnabled(false);
             endGame_btn.setEnabled(false);
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
+                    WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
+                    getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
                     getUserName();
                     newGame_btn.setEnabled(true);
                     endGame_btn.setEnabled(true);

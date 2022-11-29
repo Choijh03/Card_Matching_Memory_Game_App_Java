@@ -185,8 +185,8 @@ public class Splash extends AppCompatActivity {
             writeToFile("level6_init1.txt", "gjs");
         }
 
-        File file2 = new File(getApplicationContext().getFilesDir(),"level6_init2.txt");
-        if(file2.exists()){
+        File file8 = new File(getApplicationContext().getFilesDir(),"level6_init2.txt");
+        if(file8.exists()){
             //Do nothing
         }
         else{
