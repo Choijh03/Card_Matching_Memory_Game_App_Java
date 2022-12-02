@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/my_primary"
+    android:background="@drawable/back_ground1"
     tools:context=".Game6_Activity">
 
     <Button
@@ -31,7 +31,7 @@
         android:textStyle="bold"
         android:textSize="25dp"
         android:id="@+id/score_edit"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:padding="10dp" />
 
     <Button

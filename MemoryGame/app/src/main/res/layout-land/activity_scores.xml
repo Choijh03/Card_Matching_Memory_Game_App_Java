@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Scores_Activity"
-    android:background="@color/my_primary">
+    android:background="@drawable/back_ground4">
 
    <LinearLayout
        android:layout_width="wrap_content"
@@ -18,15 +18,17 @@
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:orientation="horizontal"
-           android:gravity="center_horizontal">
+           android:gravity="center_horizontal"
+           android:layout_marginTop="15dp">
            <LinearLayout
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:orientation="vertical"
-               android:layout_marginLeft="20dp"
-               android:layout_marginRight="20dp">
+               android:layout_marginLeft="190dp"
+               android:layout_marginRight="10dp">
                <TextView
                    android:textStyle="bold"
+                   android:textColor="@color/black"
                    android:textSize="20dp"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -42,14 +44,17 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="In1"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level4_initial1"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
+                       android:textColor="@color/black"
                        android:text=":    " />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
+                       android:textColor="@color/black"
                        android:text="S"
                        android:id="@+id/tv_level4_score1" />
                </LinearLayout>
@@ -62,15 +67,18 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="In2"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level4_initial2"
                        />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
+                       android:textColor="@color/black"
                        android:text=":    " />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
+                       android:textColor="@color/black"
                        android:text="S"
                        android:id="@+id/tv_level4_score2"
                        />
@@ -84,15 +92,18 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="In3"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level4_initial3"
                        />
                    <TextView
                        android:layout_width="wrap_content"
+                       android:textColor="@color/black"
                        android:layout_height="wrap_content"
                        android:text=":    " />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
+                       android:textColor="@color/black"
                        android:text="S"
                        android:id="@+id/tv_level4_score3"
                        />
@@ -104,14 +115,15 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:orientation="vertical"
-               android:layout_marginLeft="20dp"
-               android:layout_marginRight="20dp">
+               android:layout_marginLeft="10dp"
+               android:layout_marginRight="10dp">
                <TextView
                    android:textStyle="bold"
                    android:textSize="20dp"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="Level6:"
+                   android:textColor="@color/black"
                    android:layout_marginBottom="10dp"
                    />
                <LinearLayout
@@ -123,14 +135,17 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="Initial1"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level6_initial1"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
+                       android:textColor="@color/black"
                        android:text=":    " />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
+                       android:textColor="@color/black"
                        android:text="Score1"
                        android:id="@+id/tv_level6_score1" />
                </LinearLayout>
@@ -143,17 +158,20 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="Initial2"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level6_initial2"
                        />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text=":    " />
+                       android:text=":    "
+                       android:textColor="@color/black"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="Score2"
                        android:id="@+id/tv_level6_score2"
+                       android:textColor="@color/black"
                        />
                </LinearLayout>
                <LinearLayout
@@ -165,16 +183,19 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="Initial3"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level6_initial3"
                        />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
+                       android:textColor="@color/black"
                        android:text=":    " />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="Score3"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level6_score3"
                        />
                </LinearLayout>
@@ -186,14 +207,15 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:orientation="vertical"
-               android:layout_marginLeft="20dp"
-               android:layout_marginRight="20dp">
+               android:layout_marginLeft="10dp"
+               android:layout_marginRight="10dp">
                <TextView
                    android:textStyle="bold"
                    android:textSize="20dp"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="Level8:"
+                   android:textColor="@color/black"
                    android:layout_marginBottom="10dp"
                    />
                <LinearLayout
@@ -205,16 +227,19 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="Initial1"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level8_initial1"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text=":    " />
+                       android:text=":    "
+                       android:textColor="@color/black"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="Score1"
-                       android:id="@+id/tv_level8_score1" />
+                       android:id="@+id/tv_level8_score1"
+                       android:textColor="@color/black"/>
                </LinearLayout>
                <LinearLayout
                    android:layout_width="wrap_content"
@@ -226,16 +251,19 @@
                        android:layout_height="wrap_content"
                        android:text="Initial2"
                        android:id="@+id/tv_level8_initial2"
+                       android:textColor="@color/black"
                        />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text=":    " />
+                       android:text=":    "
+                       android:textColor="@color/black"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="Score2"
                        android:id="@+id/tv_level8_score2"
+                       android:textColor="@color/black"
                        />
                </LinearLayout>
                <LinearLayout
@@ -247,16 +275,19 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="Initial3"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level8_initial3"
                        />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
+                       android:textColor="@color/black"
                        android:text=":    " />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="Score3"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level8_score3"
                        />
                </LinearLayout>
@@ -268,14 +299,15 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:orientation="vertical"
-               android:layout_marginLeft="20dp"
-               android:layout_marginRight="20dp">
+               android:layout_marginLeft="10dp"
+               android:layout_marginRight="10dp">
                <TextView
                    android:textStyle="bold"
                    android:textSize="20dp"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="Level10:"
+                   android:textColor="@color/black"
                    android:layout_marginBottom="10dp"
                    />
                <LinearLayout
@@ -287,15 +319,18 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="In1"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level10_initial1"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text=":    " />
+                       android:text=":    "
+                       android:textColor="@color/black"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="S"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level10_score1" />
                </LinearLayout>
                <LinearLayout
@@ -307,16 +342,19 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="In2"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level10_initial2"
                        />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text=":    " />
+                       android:text=":    "
+                       android:textColor="@color/black"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="S"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level10_score2"
                        />
                </LinearLayout>
@@ -329,16 +367,19 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="In3"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level10_initial3"
                        />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text=":    " />
+                       android:text=":    "
+                       android:textColor="@color/black"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="S"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level10_score3"
                        />
                </LinearLayout>
@@ -350,14 +391,15 @@
                android:layout_height="wrap_content"
                android:orientation="vertical"
 
-               android:layout_marginLeft="20dp"
-               android:layout_marginRight="20dp">
+               android:layout_marginLeft="10dp"
+               android:layout_marginRight="10dp">
                <TextView
                    android:textStyle="bold"
                    android:textSize="20dp"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="Level12:"
+                   android:textColor="@color/black"
                    android:layout_marginBottom="10dp"
                    />
                <LinearLayout
@@ -369,16 +411,19 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="In1"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level12_initial1"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text=":    " />
+                       android:text=":    "
+                       android:textColor="@color/black"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="S"
-                       android:id="@+id/tv_level12_score1" />
+                       android:id="@+id/tv_level12_score1"
+                       android:textColor="@color/black"/>
                </LinearLayout>
                <LinearLayout
                    android:layout_width="wrap_content"
@@ -390,16 +435,19 @@
                        android:layout_height="wrap_content"
                        android:text="In2"
                        android:id="@+id/tv_level12_initial2"
+                       android:textColor="@color/black"
                        />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text=":    " />
+                       android:text=":    "
+                       android:textColor="@color/black"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="S2"
                        android:id="@+id/tv_level12_score2"
+                       android:textColor="@color/black"
                        />
                </LinearLayout>
                <LinearLayout
@@ -411,16 +459,19 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="In3"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level12_initial3"
                        />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text=":    " />
+                       android:text=":    "
+                       android:textColor="@color/black"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="S"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level12_score3"
                        />
                </LinearLayout>
@@ -441,7 +492,7 @@
                android:layout_height="wrap_content"
                android:orientation="vertical"
                android:layout_marginBottom="15dp"
-               android:layout_marginLeft="10dp"
+               android:layout_marginLeft="200dp"
                android:layout_marginRight="10dp">
                <TextView
                    android:textStyle="bold"
@@ -449,6 +500,7 @@
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="Level14:"
+                   android:textColor="@color/black"
                    android:layout_marginBottom="10dp"
                    />
                <LinearLayout
@@ -460,14 +512,17 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="Initial1"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level14_initial1"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
+                       android:textColor="@color/black"
                        android:text=":    " />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
+                       android:textColor="@color/black"
                        android:text="Score1"
                        android:id="@+id/tv_level14_score1" />
                </LinearLayout>
@@ -480,15 +535,18 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="Initial2"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level14_initial2"
                        />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
+                       android:textColor="@color/black"
                        android:text=":    " />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
+                       android:textColor="@color/black"
                        android:text="Score2"
                        android:id="@+id/tv_level14_score2"
                        />
@@ -501,16 +559,19 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="Initial3"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level14_initial3"
                        />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
+                       android:textColor="@color/black"
                        android:text=":    " />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="Score3"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level14_score3"
                        />
                </LinearLayout>
@@ -530,6 +591,7 @@
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="Level16:"
+                   android:textColor="@color/black"
                    android:layout_marginBottom="10dp"
                    />
                <LinearLayout
@@ -541,15 +603,18 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="In1"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level16_initial1"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text=":    " />
+                       android:text=":    "
+                       android:textColor="@color/black"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="S"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level16_score1" />
                </LinearLayout>
                <LinearLayout
@@ -561,16 +626,19 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="In2"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level16_initial2"
                        />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text=":    " />
+                       android:text=":    "
+                       android:textColor="@color/black"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="S2"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level16_score2"
                        />
                </LinearLayout>
@@ -583,16 +651,19 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="In3"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level16_initial3"
                        />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text=":    " />
+                       android:text=":    "
+                       android:textColor="@color/black"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="S"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level16_score3"
                        />
                </LinearLayout>
@@ -611,6 +682,7 @@
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="Level18:"
+                   android:textColor="@color/black"
                    android:layout_marginBottom="10dp"
                    />
                <LinearLayout
@@ -622,15 +694,18 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="In1"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level18_initial1"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text=":    " />
+                       android:text=":    "
+                       android:textColor="@color/black"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="S"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level18_score1" />
                </LinearLayout>
                <LinearLayout
@@ -642,16 +717,19 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="In2"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level18_initial2"
                        />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text=":    " />
+                       android:text=":    "
+                       android:textColor="@color/black"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="S"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level18_score2"
                        />
                </LinearLayout>
@@ -664,16 +742,19 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="In3"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level18_initial3"
                        />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text=":    " />
+                       android:text=":    "
+                       android:textColor="@color/black"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="S"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level18_score3"
                        />
                </LinearLayout>
@@ -695,6 +776,7 @@
                    android:layout_marginBottom="10dp"
                    android:text="Level20:"
                    android:textSize="20dp"
+                   android:textColor="@color/black"
                    android:textStyle="bold" />
 
                <LinearLayout
@@ -706,16 +788,19 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="Initial1"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level20_initial1"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text=":    " />
+                       android:text=":    "
+                       android:textColor="@color/black"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="Score1"
-                       android:id="@+id/tv_level20_score1" />
+                       android:id="@+id/tv_level20_score1"
+                       android:textColor="@color/black"/>
                </LinearLayout>
                <LinearLayout
                    android:layout_width="wrap_content"
@@ -727,16 +812,19 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="Initial2"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level20_initial2"
                        />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text=":    " />
+                       android:text=":    "
+                       android:textColor="@color/black"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="Score2"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level20_score2" />
                </LinearLayout>
                <LinearLayout
@@ -748,17 +836,20 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="Initial3"
+                       android:textColor="@color/black"
                        android:id="@+id/tv_level20_initial3"
                        />
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text=":    " />
+                       android:text=":    "
+                       android:textColor="@color/black"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="Score3"
                        android:id="@+id/tv_level20_score3"
+                       android:textColor="@color/black"
                        />
                </LinearLayout>
 
