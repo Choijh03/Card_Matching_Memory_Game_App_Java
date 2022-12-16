@@ -14,7 +14,7 @@ Available Functionalities:
 
 -The correct number of blank tiles display.
 
--When users click a tile, the word appears.
+-When users click a tile, the image appears.
 
 -When the user clicks the Try Again button, if the tiles do not match, they turn over.
 
