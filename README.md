@@ -6,7 +6,7 @@ Overall theme of the app is Yu-Gi_Oh!
 
 There are total 9 levels available (from 4 cards to 20 cards).
 
-Each level has each own backgroun and music.
+Each level has each own background and music.
 
 This app can be found on google store: Match Yu-gi-oh Cards!.
 
@@ -36,7 +36,7 @@ Available Functionalities:
 
 -Users can perform ancestral navigation using an Up button.
 
--Game is replayable
+-Game is re-playable.
 
 Android View:
 
