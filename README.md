@@ -8,6 +8,8 @@ There are total 9 levels available (from 4 cards to 20 cards).
 
 Each level has each own backgroun and music.
 
+This app can be found on google store: Match Yu-gi-oh Cards!.
+
 Available Functionalities:
 
 -Users can enter the number of tiles to be displayed.
